@@ -1,5 +1,4 @@
 #include "roBa.dtsi"
-#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -20,8 +19,6 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        // センサーは1200で細かく読み、ここで半分にしてカーソル速度を600相当にする（端数は持ち越し）
-        input-processors = <&zip_xy_scaler 1 2>;
     };
 };
 
